@@ -9,23 +9,23 @@
 import Foundation
 
 class Coupon {
+    let description: String
+    let discount: Double
+    let qrcode: String
+    let product: Product
     
-    let name: String
-    let image: String
-    
-    init(name: String, image: String) {
-        self.name = name
-        self.image = image
+    init(description: String, discount: Double, qrcode: String, product: Product) {
+        self.description = description
+        self.discount = discount
+        self.qrcode = qrcode
+        self.product = product
     }
     
     static func list() -> [Coupon] {
         var coupons: [Coupon] = [Coupon]()
-        
-        coupons.append(Coupon.init(name: "Cupom 1", image: "default-image"))
-        coupons.append(Coupon.init(name: "Cupom 2", image: "default-image"))
-        coupons.append(Coupon.init(name: "Cupom 3", image: "default-image"))
-        coupons.append(Coupon.init(name: "Cupom 4", image: "default-image"))
-        coupons.append(Coupon.init(name: "Cupom 5", image: "default-image"))
+    
+        coupons.append(Coupon.init(description: "Promoção foda!", discount: 25.3, qrcode: "9412-4326", product: Product.bloominOnions()))
+        coupons.append(Coupon.init(description: "Veganos cuza1", discount: 24.24, qrcode: "2641-9124", product: Product.hamburguerBovino()))
         
         return coupons
     }

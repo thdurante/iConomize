@@ -17,6 +17,8 @@
 		23D32E601DE66BF50087848C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D32E5E1DE66BF50087848C /* LaunchScreen.storyboard */; };
 		23D32E6C1DE66CEE0087848C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 23D32E6B1DE66CEE0087848C /* .gitignore */; };
 		23D32E6E1DE66D020087848C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 23D32E6D1DE66D020087848C /* README.md */; };
+		3FB696831DEDEF9300BCCAD3 /* Partner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB696821DEDEF9300BCCAD3 /* Partner.swift */; };
+		3FB696851DEDF0C000BCCAD3 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB696841DEDF0C000BCCAD3 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		23D32E611DE66BF50087848C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23D32E6B1DE66CEE0087848C /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		23D32E6D1DE66D020087848C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3FB696821DEDEF9300BCCAD3 /* Partner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Partner.swift; sourceTree = "<group>"; };
+		3FB696841DEDF0C000BCCAD3 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				233E69771DEDE80A00B02F56 /* Coupon.swift */,
+				3FB696821DEDEF9300BCCAD3 /* Partner.swift */,
+				3FB696841DEDF0C000BCCAD3 /* Product.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -185,9 +191,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				233E697A1DEDEC5E00B02F56 /* CouponDetailViewController.swift in Sources */,
+				3FB696851DEDF0C000BCCAD3 /* Product.swift in Sources */,
 				233E69781DEDE80A00B02F56 /* Coupon.swift in Sources */,
 				23D32E6E1DE66D020087848C /* README.md in Sources */,
 				233E69761DEDE7D800B02F56 /* FeaturedTableViewController.swift in Sources */,
+				3FB696831DEDEF9300BCCAD3 /* Partner.swift in Sources */,
 				23D32E561DE66BF50087848C /* AppDelegate.swift in Sources */,
 				233E69741DEDE77E00B02F56 /* FeaturedTableViewCell.swift in Sources */,
 			);
