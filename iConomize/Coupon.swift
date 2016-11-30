@@ -32,7 +32,7 @@ class Coupon {
         coupons.append(Coupon.init(
             description: "Comemore seu momento com este desconto incrível no Billabong Hour.",
             discount: 25.3,
-            qrcode: "9412-4326",
+            qrcode: "X85D10G8",
             product: product
         ))
         
@@ -42,7 +42,7 @@ class Coupon {
         coupons.append(Coupon.init(
             description: "Temos o prazer de lhe apresentar o melhor cheeseburguer do mundo!\nVenha conhecer.",
             discount: 24.24,
-            qrcode: "2641-9124",
+            qrcode: "19K7T5VV",
             product: product
         ))
         
@@ -51,7 +51,7 @@ class Coupon {
         coupons.append(Coupon.init(
             description: "Fazemos o nosso Fettuccine exatamente como minhas avós faziam, artesanalmente.\nVenha se deliciar com esse gostinho caseiro.",
             discount: 13,
-            qrcode: "8241-0381",
+            qrcode: "D13K7N4U",
             product: product
         ))
 
