@@ -37,7 +37,8 @@ class FeaturedTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("featuredCell", forIndexPath: indexPath) as! FeaturedTableViewCell
         
-        cell.couponName.text = coupons![indexPath.row].product.name
+        cell.productName.text = coupons![indexPath.row].product.name
+        cell.partnerName.text = coupons![indexPath.row].product.partner!.name
         cell.couponImage.image = UIImage.init(named: coupons![indexPath.row].product.image!)
 
         return cell

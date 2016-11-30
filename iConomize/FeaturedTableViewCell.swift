@@ -11,7 +11,8 @@ import UIKit
 class FeaturedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var couponImage: UIImageView!
-    @IBOutlet weak var couponName: UILabel!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var partnerName: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
