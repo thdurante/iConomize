@@ -9,6 +9,7 @@
 import Foundation
 
 class Coupon {
+    
     let description: String
     let discount: Double
     let qrcode: String
@@ -22,11 +23,30 @@ class Coupon {
     }
     
     static func list() -> [Coupon] {
-        var coupons: [Coupon] = [Coupon]()
+        var coupons = [Coupon]()
+        var product = Product()
     
-        coupons.append(Coupon.init(description: "Promoção foda!", discount: 25.3, qrcode: "9412-4326", product: Product.bloominOnions()))
-        coupons.append(Coupon.init(description: "Veganos cuza1", discount: 24.24, qrcode: "2641-9124", product: Product.hamburguerBovino()))
+        // MARK: OUTBACK
+        product = Product.menuOutback()["bloominonion"]!
+        product.partner = Partner.outbackSteakhouse()
+        coupons.append(Coupon.init(
+            description: "Comemore seu momento com este desconto incrível no Billabong Hour.",
+            discount: 25.3,
+            qrcode: "9412-4326",
+            product: product
+        ))
+        
+        // MARK: MADERO
+        product = Product.menuMadero()["cheeseburguer"]!
+        product.partner = Partner.restauranteMadero()
+        coupons.append(Coupon.init(
+            description: "Veganos cuza1",
+            discount: 24.24,
+            qrcode: "2641-9124",
+            product: product
+        ))
         
         return coupons
     }
+    
 }

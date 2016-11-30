@@ -9,6 +9,7 @@
 import Foundation
 
 class Partner {
+    
     let name: String
     let description: String
     let address: String
@@ -28,10 +29,27 @@ class Partner {
     }
     
     static func restauranteMadero() -> Partner {
-        return Partner.init(name: "Restaurante Madero", description: "The best burguer in the world", address: "Goiânia Shopping", images: ["madero1", "madero2", "madero3"], mapLat: -16.707670, mapLong: -49.272352, menu: Product.menuMadero())
+        return Partner.init(
+            name: "Restaurante Madero",
+            description: "The best burguer in the world",
+            address: "Goiânia Shopping",
+            images: [""],
+            mapLat: -16.707670,
+            mapLong: -49.272352,
+            menu: Array(Product.menuMadero().values)
+        )
     }
     
     static func outbackSteakhouse() -> Partner {
-        return Partner.init(name: "Outback Steakhouse", description: "O sabor da Austrália", address: "Shopping Flamboyant", images: ["outback1", "outback2", "outback3"], mapLat: -16.708464, mapLong: -49.235719, menu: Product.menuOutback())
+        return Partner.init(
+            name: "Outback Steakhouse",
+            description: "O sabor da Austrália",
+            address: "Shopping Flamboyant",
+            images: ["outback1", "outback2", "outback3"],
+            mapLat: -16.708464,
+            mapLong: -49.235719,
+            menu: Array(Product.menuOutback().values)
+        )
     }
+    
 }

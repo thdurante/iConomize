@@ -23,7 +23,7 @@ class CouponDetailViewController: UIViewController {
     
         image.image = UIImage.init(named: coupon.product.image!)
         name.text = coupon.product.name
-        price.text = "De \(coupon.product.price!) por \(coupon.product.price! * ((100 - coupon.discount)/100))"
+        price.text = "De R$\(coupon.product.price!) por R$\(coupon.product.price! * ((100 - coupon.discount)/100))"
         couponDescription.text = coupon.description
         qrcode.text = "Cupom: \(coupon.qrcode)"
     }
