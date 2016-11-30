@@ -11,8 +11,10 @@ import UIKit
 class CouponDetailViewController: UIViewController {
 
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var partner: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var discountPrice: UILabel!
     @IBOutlet weak var couponDescription: UILabel!
     @IBOutlet weak var qrcode: UILabel!
     
@@ -22,10 +24,23 @@ class CouponDetailViewController: UIViewController {
         super.viewDidLoad()
     
         image.image = UIImage.init(named: coupon.product.image!)
+        partner.text = coupon.product.partner!.name
         name.text = coupon.product.name
-        price.text = "De R$\(coupon.product.price!) por R$\(coupon.product.price! * ((100 - coupon.discount)/100))"
-        couponDescription.text = coupon.description
-        qrcode.text = "Cupom: \(coupon.qrcode)"
+        
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.stringFromNumber(coupon.product.price!)
+        formatter.locale = NSLocale(localeIdentifier: "pt_BR")
+        let priceFormated = formatter.stringFromNumber(coupon.product.price!)
+        let discountPriceFormated = formatter.stringFromNumber(coupon.product.price! * ((100 - coupon.discount)/100))
+        
+        let atributeString: NSMutableAttributedString = NSMutableAttributedString(string: priceFormated!)
+        atributeString.addAttribute(NSStrikethroughStyleAttributeName, value: 1, range: NSMakeRange(0, atributeString.length))
+        
+        price.attributedText = atributeString
+        discountPrice.text = discountPriceFormated
+        couponDescription.text = "\(coupon.description)\n\n\(coupon.product.description!)"
+        qrcode.text = coupon.qrcode
     }
 
     override func didReceiveMemoryWarning() {
