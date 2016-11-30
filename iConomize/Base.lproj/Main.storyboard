@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Locais Próximos" id="eAJ-JD-F5t"/>
+                    <tabBarItem key="tabBarItem" title="Locais Próximos" image="nearby_18pt_3x" id="eAJ-JD-F5t"/>
                     <navigationItem key="navigationItem" title="Próximo" id="3dL-da-Vd9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -91,7 +91,7 @@
         <scene sceneID="aha-dL-Ujg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="186-0O-eyF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Categorias" id="7wF-Kh-9jc"/>
+                    <tabBarItem key="tabBarItem" title="Categorias" image="category_18pt_3x" id="7wF-Kh-9jc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KJa-hM-boG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -110,7 +110,7 @@
         <scene sceneID="ug6-zC-ZrQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="saR-eq-cnv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Configuração" id="qjK-lu-m2e"/>
+                    <tabBarItem key="tabBarItem" title="Configuração" image="settings_18pt_3x" id="qjK-lu-m2e"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="41x-8F-tNP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -129,7 +129,7 @@
         <scene sceneID="Ntz-5a-dXo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wba-xa-jbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Destaque" id="YOU-Ma-IFc"/>
+                    <tabBarItem key="tabBarItem" title="Destaque" image="featured_18pt_3x" id="YOU-Ma-IFc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gtc-ch-sog">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -373,6 +373,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="category_18pt_3x" width="27" height="27"/>
         <image name="create-qr-code" width="73" height="73"/>
+        <image name="featured_18pt_3x" width="27" height="27"/>
+        <image name="nearby_18pt_3x" width="27" height="27"/>
+        <image name="settings_18pt_3x" width="27" height="27"/>
     </resources>
 </document>
