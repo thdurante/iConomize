@@ -208,6 +208,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="couponImage" destination="U6f-2b-bkS" id="dWs-XY-xfI"/>
+                                    <outlet property="innerViewBackground" destination="PPV-RG-BzK" id="jRC-Uv-qn6"/>
                                     <outlet property="partnerName" destination="F76-P4-SyM" id="xmb-mI-B5e"/>
                                     <outlet property="productName" destination="wzD-tL-rGr" id="SVl-2M-Ufn"/>
                                     <segue destination="dxB-Bv-bbB" kind="show" identifier="couponDetailSegue" id="mlx-cJ-Qvt"/>

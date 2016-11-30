@@ -46,6 +46,16 @@ class Coupon {
             product: product
         ))
         
+        product = Product.menuMadero()["fettuccine"]!
+        product.partner = Partner.restauranteMadero()
+        coupons.append(Coupon.init(
+            description: "Macarrao gay",
+            discount: 13,
+            qrcode: "8241-0381",
+            product: product
+        ))
+
+        
         return coupons
     }
     
