@@ -40,7 +40,7 @@ class Coupon {
         product = Product.menuMadero()["cheeseburguer"]!
         product.partner = Partner.restauranteMadero()
         coupons.append(Coupon.init(
-            description: "Veganos cuza1",
+            description: "Temos o prazer de lhe apresentar o melhor cheeseburguer do mundo!\nVenha conhecer.",
             discount: 24.24,
             qrcode: "2641-9124",
             product: product
@@ -49,7 +49,7 @@ class Coupon {
         product = Product.menuMadero()["fettuccine"]!
         product.partner = Partner.restauranteMadero()
         coupons.append(Coupon.init(
-            description: "Macarrao gay",
+            description: "Fazemos o nosso Fettuccine exatamente como minhas avós faziam, artesanalmente.\nVenha se deliciar com esse gostinho caseiro.",
             discount: 13,
             qrcode: "8241-0381",
             product: product

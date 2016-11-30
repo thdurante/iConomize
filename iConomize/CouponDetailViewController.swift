@@ -39,8 +39,10 @@ class CouponDetailViewController: UIViewController {
         
         price.attributedText = atributeString
         discountPrice.text = discountPriceFormated
-        couponDescription.text = "\(coupon.description)\n\n\(coupon.product.description!)"
+        couponDescription.text = coupon.description
         qrcode.text = coupon.qrcode
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
