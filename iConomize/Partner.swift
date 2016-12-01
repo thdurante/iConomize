@@ -34,8 +34,8 @@ class Partner {
             description: "The best burguer in the world",
             address: "Goiânia Shopping",
             images: [""],
-            mapLat: -16.707670,
-            mapLong: -49.272352,
+            mapLat: -16.598011,
+            mapLong: -49.261219,
             menu: Array(Product.menuMadero().values)
         )
     }
@@ -46,8 +46,8 @@ class Partner {
             description: "O sabor da Austrália",
             address: "Shopping Flamboyant",
             images: ["outback1", "outback2", "outback3"],
-            mapLat: -16.708464,
-            mapLong: -49.235719,
+            mapLat: -16.609259,
+            mapLong: -49.265468,
             menu: Array(Product.menuOutback().values)
         )
     }

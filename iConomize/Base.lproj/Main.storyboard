@@ -29,7 +29,7 @@
         <!--Nearby-->
         <scene sceneID="PGa-FP-87Z">
             <objects>
-                <viewController id="voi-I2-jJr" userLabel="Nearby" sceneMemberID="viewController">
+                <viewController id="voi-I2-jJr" userLabel="Nearby" customClass="NearbyViewController" customModule="iConomize" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="D5I-ja-lqt"/>
                         <viewControllerLayoutGuide type="bottom" id="3Kh-aH-1UQ"/>
@@ -37,11 +37,25 @@
                     <view key="view" contentMode="scaleToFill" id="W70-iK-Rqn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nF2-F5-Bvn">
+                                <rect key="frame" x="-4" y="20" width="383" height="598"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nF2-F5-Bvn" firstAttribute="top" secondItem="D5I-ja-lqt" secondAttribute="bottom" id="K4D-bq-gbE"/>
+                            <constraint firstItem="3Kh-aH-1UQ" firstAttribute="top" secondItem="nF2-F5-Bvn" secondAttribute="bottom" id="RSp-n7-vh8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nF2-F5-Bvn" secondAttribute="trailing" constant="-20" id="T1k-yA-sVB"/>
+                            <constraint firstItem="nF2-F5-Bvn" firstAttribute="leading" secondItem="W70-iK-Rqn" secondAttribute="leadingMargin" constant="-20" id="XS5-vI-dl6"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Locais Próximos" image="nearby_18pt_3x" id="eAJ-JD-F5t"/>
                     <navigationItem key="navigationItem" title="Próximo" id="3dL-da-Vd9"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mapView" destination="nF2-F5-Bvn" id="6x3-3k-H8x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0DL-L5-p5T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
