@@ -10,6 +10,13 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var searchRadius: UISlider!
+    @IBOutlet weak var currentSearchRadius: UILabel!
+    @IBAction func setRadius(sender: UISlider) {
+        let currentValue = Int(sender.value)
+        currentSearchRadius.text = "\(currentValue) Km"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +25,8 @@ class SettingsViewController: UIViewController {
         let imageLogo = UIImage(named: "logo")
         imageView.image = imageLogo
         self.navigationItem.titleView = imageView
+        
+        currentSearchRadius.text = "\(Int(searchRadius.value)) Km"
     }
 
     override func didReceiveMemoryWarning() {

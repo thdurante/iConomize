@@ -72,9 +72,71 @@
                     <view key="view" contentMode="scaleToFill" id="EXO-Y7-XYn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="NtC-Ae-xg5">
+                                <rect key="frame" x="16" y="72" width="343" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Deseja Receber notificações?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bm-Bd-EtX">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFk-CU-XWF">
+                                        <rect key="frame" x="294" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Raio de busca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtY-I0-rEY">
+                                <rect key="frame" x="187" y="318" width="0.0" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t8e-zh-mnE">
+                                <rect key="frame" x="0.0" y="0.0" width="25" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-zq-Nca">
+                                <rect key="frame" x="16" y="111" width="343" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Raio de busca" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-nb-ldi">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="12" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="grh-EN-hKA">
+                                        <rect key="frame" x="77" y="0.0" width="225" height="31"/>
+                                        <connections>
+                                            <action selector="setRadius:" destination="dPq-cD-lgr" eventType="valueChanged" id="Llz-ad-Dqq"/>
+                                        </connections>
+                                    </slider>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GI-7u-5e4">
+                                        <rect key="frame" x="308" y="0.0" width="36" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Lta-zq-Nca" firstAttribute="leading" secondItem="EXO-Y7-XYn" secondAttribute="leadingMargin" id="4XU-hM-t9M"/>
+                            <constraint firstItem="Lta-zq-Nca" firstAttribute="top" secondItem="NtC-Ae-xg5" secondAttribute="bottom" constant="8" id="Bmr-HR-SYi"/>
+                            <constraint firstItem="NtC-Ae-xg5" firstAttribute="top" secondItem="yM5-Kn-FgE" secondAttribute="bottom" constant="8" id="Fro-Gd-X7U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lta-zq-Nca" secondAttribute="trailing" id="bPr-PY-8uh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NtC-Ae-xg5" secondAttribute="trailing" id="ccs-Dr-0bs"/>
+                            <constraint firstItem="NtC-Ae-xg5" firstAttribute="leading" secondItem="EXO-Y7-XYn" secondAttribute="leadingMargin" id="mIM-kK-IcN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Configuração" id="i9n-a3-gfO"/>
+                    <connections>
+                        <outlet property="currentSearchRadius" destination="8GI-7u-5e4" id="KOM-qa-QuG"/>
+                        <outlet property="searchRadius" destination="grh-EN-hKA" id="8Ie-Ye-L88"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H6s-1o-n7a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,11 +201,11 @@
             </objects>
             <point key="canvasLocation" x="415.5" y="1445.5"/>
         </scene>
-        <!--Destaque-->
+        <!--Cupom-->
         <scene sceneID="Ntz-5a-dXo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wba-xa-jbV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Destaque" image="featured_18pt_3x" id="YOU-Ma-IFc"/>
+                    <tabBarItem key="tabBarItem" title="Cupom" image="ic_receipt_18pt_3x" id="YOU-Ma-IFc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gtc-ch-sog">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -416,7 +478,7 @@
                                 <rect key="frame" x="0.0" y="349" width="375" height="269"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="66" id="tiQ-Fv-rfy" customClass="MenuTableViewCell" customModule="iConomize" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="66" id="tiQ-Fv-rfy" customClass="MenuTableViewCell" customModule="iConomize" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tiQ-Fv-rfy" id="68Z-bU-AYN">
@@ -500,7 +562,7 @@
     <resources>
         <image name="category_18pt_3x" width="27" height="27"/>
         <image name="create-qr-code" width="73" height="73"/>
-        <image name="featured_18pt_3x" width="27" height="27"/>
+        <image name="ic_receipt_18pt_3x" width="27" height="27"/>
         <image name="nearby_18pt_3x" width="27" height="27"/>
         <image name="settings_18pt_3x" width="27" height="27"/>
     </resources>
