@@ -29,8 +29,6 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         markPartnersLocations()
         
         mapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
-
-        // addGesture()
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,14 +59,7 @@ class NearbyViewController: UIViewController, CLLocationManagerDelegate {
         
         mapView.setRegion(region, animated: true)
     }
-    
-//    func addGesture() {
-//        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(addAnnotationToMap(_:)))
-//        longPress.minimumPressDuration = 1.0
-//        
-//        mapView.addGestureRecognizer(longPress)
-//    }
-    
+        
     func markPartnersLocations() {
         let location1 = CLLocationCoordinate2DMake((partner["outback"]?.mapLat)!, (partner["outback"]?.mapLong)!)
         
