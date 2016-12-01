@@ -52,7 +52,9 @@ class CouponDetailViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "partnerSegue" {
-            
+            if let partnerView = segue.destinationViewController as? PartnerViewController {
+                partnerView.partner = coupon.product.partner
+            }
         }
     }
 

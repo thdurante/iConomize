@@ -13,21 +13,11 @@ class PartnerViewController: UIViewController {
 
     @IBOutlet weak var slideshowView: UIView!
     
+    var partner: Partner?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let slideshow = ImageSlideshow.init(
-            frame: slideshowView.frame
-        )
-        
-        slideshow.setImageInputs([
-            ImageSource(image: UIImage(named: "madero1")!),
-            ImageSource(image: UIImage(named: "madero2")!),
-            ImageSource(image: UIImage(named: "madero3")!),
-            ImageSource(image: UIImage(named: "madero4")!)
-        ])
-        
-        self.view.addSubview(slideshow)
+        addSlideshowToView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,7 +25,6 @@ class PartnerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -46,4 +35,37 @@ class PartnerViewController: UIViewController {
     }
     */
 
+}
+
+extension PartnerViewController {
+    
+    func setSlideshowImages(partnerName: String) -> ImageSlideshow {
+        let slideshow = ImageSlideshow.init(
+            frame: slideshowView.frame
+        )
+        
+        var images = [ImageSource]()
+        for i in 1...4 {
+            images.append(ImageSource(image: UIImage(named: "\(partnerName)\(i)")!))
+        }
+        
+        slideshow.setImageInputs(images)
+        
+        return slideshow
+    }
+    
+    func addSlideshowToView() {
+        var slideshow: ImageSlideshow = ImageSlideshow()
+        switch partner!.name {
+        case "Restaurante Madero":
+            slideshow = setSlideshowImages("madero")
+        case "Outback Steakhouse":
+            slideshow = setSlideshowImages("outback")
+        default:
+            "Error"
+        }
+        
+        self.view.addSubview(slideshow)
+    }
+    
 }
