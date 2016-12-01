@@ -17,6 +17,8 @@
 		23618D091DF0825000AC6145 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23618D081DF0825000AC6145 /* MapKit.framework */; };
 		23618D0B1DF0825800AC6145 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23618D0A1DF0825800AC6145 /* CoreLocation.framework */; };
 		23618D0D1DF0830800AC6145 /* NearbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23618D0C1DF0830800AC6145 /* NearbyViewController.swift */; };
+		237681411DF098F500DFBD1E /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237681401DF098F500DFBD1E /* CategoriesViewController.swift */; };
+		237681431DF0991F00DFBD1E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237681421DF0991F00DFBD1E /* SettingsViewController.swift */; };
 		23C08E991DEFAE3E00173AD6 /* Podfile.lock in Resources */ = {isa = PBXBuildFile; fileRef = 23C08E981DEFAE3E00173AD6 /* Podfile.lock */; };
 		23D32E561DE66BF50087848C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D32E551DE66BF50087848C /* AppDelegate.swift */; };
 		23D32E5B1DE66BF50087848C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23D32E591DE66BF50087848C /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 		23618D081DF0825000AC6145 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		23618D0A1DF0825800AC6145 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		23618D0C1DF0830800AC6145 /* NearbyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearbyViewController.swift; sourceTree = "<group>"; };
+		237681401DF098F500DFBD1E /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		237681421DF0991F00DFBD1E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23C08E981DEFAE3E00173AD6 /* Podfile.lock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile.lock; sourceTree = "<group>"; };
 		23D32E521DE66BF50087848C /* iConomize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iConomize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23D32E551DE66BF50087848C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		23D32E691DE66C120087848C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				237681421DF0991F00DFBD1E /* SettingsViewController.swift */,
+				237681401DF098F500DFBD1E /* CategoriesViewController.swift */,
 				23618D0C1DF0830800AC6145 /* NearbyViewController.swift */,
 				23618D041DEFB0C400AC6145 /* PartnerViewController.swift */,
 				233E69751DEDE7D800B02F56 /* FeaturedTableViewController.swift */,
@@ -292,6 +298,7 @@
 			files = (
 				233E697A1DEDEC5E00B02F56 /* CouponDetailViewController.swift in Sources */,
 				3FB696851DEDF0C000BCCAD3 /* Product.swift in Sources */,
+				237681411DF098F500DFBD1E /* CategoriesViewController.swift in Sources */,
 				233E69781DEDE80A00B02F56 /* Coupon.swift in Sources */,
 				23D32E6E1DE66D020087848C /* README.md in Sources */,
 				23618D071DF076F000AC6145 /* MenuTableViewCell.swift in Sources */,
@@ -299,6 +306,7 @@
 				3FB696831DEDEF9300BCCAD3 /* Partner.swift in Sources */,
 				23618D0D1DF0830800AC6145 /* NearbyViewController.swift in Sources */,
 				23D32E561DE66BF50087848C /* AppDelegate.swift in Sources */,
+				237681431DF0991F00DFBD1E /* SettingsViewController.swift in Sources */,
 				23618D051DEFB0C400AC6145 /* PartnerViewController.swift in Sources */,
 				233E69741DEDE77E00B02F56 /* FeaturedTableViewCell.swift in Sources */,
 			);
