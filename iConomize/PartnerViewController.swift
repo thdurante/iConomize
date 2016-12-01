@@ -12,12 +12,24 @@ import ImageSlideshow
 class PartnerViewController: UIViewController {
 
     @IBOutlet weak var slideshowView: UIView!
+    @IBOutlet weak var partnerName: UILabel!
+    @IBOutlet weak var menuTableViewController: UITableView! {
+        didSet {
+            menuTableViewController.dataSource = self
+            menuTableViewController.delegate = self
+        }
+    }
     
     var partner: Partner?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addSlideshowToView()
+        
+        if let _ = partner {
+            self.partnerName.text = partner!.name
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +49,7 @@ class PartnerViewController: UIViewController {
 
 }
 
-extension PartnerViewController {
+extension PartnerViewController: UITableViewDataSource, UITableViewDelegate {
     
     func setSlideshowImages(partnerName: String) -> ImageSlideshow {
         let slideshow = ImageSlideshow.init(
@@ -56,16 +68,52 @@ extension PartnerViewController {
     
     func addSlideshowToView() {
         var slideshow: ImageSlideshow = ImageSlideshow()
-        switch partner!.name {
-        case "Restaurante Madero":
-            slideshow = setSlideshowImages("madero")
-        case "Outback Steakhouse":
-            slideshow = setSlideshowImages("outback")
-        default:
-            "Error"
+        
+        if let _ = partner {
+            switch partner!.name {
+            case "Restaurante Madero":
+                slideshow = setSlideshowImages("madero")
+            case "Outback Steakhouse":
+                slideshow = setSlideshowImages("outback")
+            default:
+                "Error"
+            }
+            
+            self.view.addSubview(slideshow)
+        }
+    }
+    
+    // MARK: - MenuTableView data source
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if let _ = partner {
+            return partner!.menu.count
         }
         
-        self.view.addSubview(slideshow)
+        return 0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuTableViewCell
+        
+        if let _ = partner {
+            cell.menuImage.image = UIImage.init(named: (partner?.menu[indexPath.row].image)!)
+            cell.productName.text = partner?.menu[indexPath.row].name
+            
+            let formatter = NSNumberFormatter()
+            formatter.numberStyle = .CurrencyStyle
+            formatter.stringFromNumber((partner?.menu[indexPath.row].price)!)
+            formatter.locale = NSLocale(localeIdentifier: "pt_BR")
+            let priceFormated = formatter.stringFromNumber((partner?.menu[indexPath.row].price)!)
+            
+            cell.productPrice.text = priceFormated
+        }
+        
+        return cell
     }
     
 }
