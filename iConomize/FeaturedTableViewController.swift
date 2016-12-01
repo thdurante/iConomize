@@ -15,6 +15,12 @@ class FeaturedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coupons = Coupon.list()
+        
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .ScaleAspectFit
+        let imageLogo = UIImage(named: "logo")
+        imageView.image = imageLogo
+        self.navigationItem.titleView = imageView
     }
 
     override func didReceiveMemoryWarning() {

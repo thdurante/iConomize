@@ -7,7 +7,7 @@ DEPENDENCIES:
   - ImageSlideshow (~> 0.5)
 
 SPEC CHECKSUMS:
-  ImageSlideshow: e95a34a0a8d442da347dc53b255e26307faff333
+  ImageSlideshow: 06bfd96b5e56264d2d9d38262b73e32034b85288
 
 PODFILE CHECKSUM: 1eef87e8d80bf7f73b166011e9f72403274bd1cb
 

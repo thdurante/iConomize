@@ -30,6 +30,8 @@ class PartnerViewController: UIViewController {
             self.partnerName.text = partner!.name
         }
         
+        self.navigationItem.title = partner!.name
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:  UIColor(red: 255/255, green: 59/255, blue: 48/255, alpha: 1)]
     }
 
     override func didReceiveMemoryWarning() {
