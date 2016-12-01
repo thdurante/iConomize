@@ -184,6 +184,12 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMV-IC-BE8">
+                                                    <rect key="frame" x="190" y="53" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
@@ -193,7 +199,9 @@
                                                 <constraint firstItem="F76-P4-SyM" firstAttribute="top" secondItem="wzD-tL-rGr" secondAttribute="bottom" id="bHY-ze-F3O"/>
                                                 <constraint firstAttribute="bottom" secondItem="F76-P4-SyM" secondAttribute="bottom" constant="8" id="nVj-4t-fDP"/>
                                                 <constraint firstItem="wzD-tL-rGr" firstAttribute="top" secondItem="PPV-RG-BzK" secondAttribute="top" constant="8" id="pxN-p9-qZd"/>
+                                                <constraint firstItem="iMV-IC-BE8" firstAttribute="centerY" secondItem="PPV-RG-BzK" secondAttribute="centerY" id="rEj-ry-Ygz"/>
                                                 <constraint firstItem="wzD-tL-rGr" firstAttribute="leading" secondItem="PPV-RG-BzK" secondAttribute="leading" constant="8" id="sYe-vv-utE"/>
+                                                <constraint firstAttribute="trailing" secondItem="iMV-IC-BE8" secondAttribute="trailing" constant="8" id="yri-hx-UjG"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -208,6 +216,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="couponImage" destination="U6f-2b-bkS" id="dWs-XY-xfI"/>
+                                    <outlet property="discountBadge" destination="iMV-IC-BE8" id="QlG-sR-5kb"/>
                                     <outlet property="innerViewBackground" destination="PPV-RG-BzK" id="jRC-Uv-qn6"/>
                                     <outlet property="partnerName" destination="F76-P4-SyM" id="xmb-mI-B5e"/>
                                     <outlet property="productName" destination="wzD-tL-rGr" id="SVl-2M-Ufn"/>

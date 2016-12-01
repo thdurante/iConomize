@@ -40,6 +40,7 @@ class FeaturedTableViewController: UITableViewController {
         cell.productName.text = coupons![indexPath.row].product.name
         cell.partnerName.text = coupons![indexPath.row].product.partner!.name
         cell.couponImage.image = UIImage.init(named: coupons![indexPath.row].product.image!)
+        cell.discountBadge.text = "-\(coupons![indexPath.row].discount)%"
 
         return cell
     }

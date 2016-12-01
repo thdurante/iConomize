@@ -14,6 +14,7 @@ class FeaturedTableViewCell: UITableViewCell {
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var partnerName: UILabel!
     @IBOutlet weak var innerViewBackground: UIView!
+    @IBOutlet weak var discountBadge: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
